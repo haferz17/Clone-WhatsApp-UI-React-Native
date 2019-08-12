@@ -42,7 +42,7 @@ export default class Status extends  Component {
                 {
                     item == null ? 
                     (
-                    <TouchableOpacity style={styles.chatList}>
+                    <TouchableOpacity style={styles.statusList}>
                         <View style={styles.containImg}>
                             <TouchableOpacity style={[styles.btnImg,{borderWidth:0}]}>
                                 <Image source={{uri:'https://koreaboo-cdn.storage.googleapis.com/2017/08/19055129_1719239944757927_5079907617859554997_o.jpg'}} style={[styles.img,{width:'99%',height:'99%'}]}/>
@@ -51,7 +51,7 @@ export default class Status extends  Component {
                                 </View>
                             </TouchableOpacity>
                         </View>
-                        <View style={styles.containChat}>
+                        <View style={styles.containStatus}>
                             <Text style={{fontSize:16,color:'#000'}}>My Status</Text>
                             <Text style={{color:'#747474'}}>Tap to add status update</Text>
                         </View>
@@ -59,13 +59,13 @@ export default class Status extends  Component {
                     )
                      :
                     (
-                    <TouchableOpacity style={styles.chatList}>
+                    <TouchableOpacity style={styles.statusList}>
                         <View style={styles.containImg}>
                             <View style={[styles.btnImg,{ borderColor: item.stats}]}>
                                 <Image source={{uri:item.img}} style={styles.img}/>
                             </View>
                         </View>
-                        <View style={styles.containChat}>
+                        <View style={styles.containStatus}>
                             <Text style={{fontSize:16,color:'#000'}}>{item.name}</Text>
                             <Text style={{color:'#747474'}}>Yesterday, {item.time}</Text>
                         </View>
@@ -95,7 +95,7 @@ export default class Status extends  Component {
     }
 }
 const styles = StyleSheet.create({
-    chatList: {
+    statusList: {
         height:77,
         flexDirection:'row',
         paddingRight:11,
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         width:'95%',
         borderRadius:50
     },
-    containChat: {
+    containStatus: {
         width:'81%',
         borderBottomWidth:1,
         borderBottomColor:'#eee',
