@@ -14,7 +14,7 @@ const TabNav = createMaterialTopTabNavigator(
         Calls: Calls
     },
     {
-        initialRouteName: 'Calls',
+        initialRouteName: 'Chats',
         tabBarOptions: {
             inactiveTintColor: '#bbb',
             showIcon: true, 
